@@ -6,13 +6,13 @@
     <title>Students</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/design.css">
-    <link type="text/css" rel="stylesheet" href="path_to/simplePagination.css"/>
+    <link rel="stylesheet" href="js/flaviusmatis-simplePagination.js-07c3728/simplePagination.css">
   </head>
   <body>
     <div class="page">
       <div class="page-header cf">
         <h2>Students</h2>
-        <-- dynamically insert search form here (optional) -->
+        <!-- dynamically insert search form here (optional) -->
 
       </div>
       <ul class="student-list">
@@ -557,19 +557,21 @@
            </div>
         </li>
       </ul>
-      <-- dynamically add pagination links here -->
+      <!-- dynamically add pagination links here -->
 
     </div>
     <script src="js/jquery-1.11.2.min.js"></script>
-    <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
+    <script type="text/javascript" src="js/flaviusmatis-simplePagination.js-07c3728/jquery.simplePagination.js"></script>
     <script>
+        /*
         $(function() {
-            $(selector).pagination({
-                items: 100,
+            $('student-item cf').pagination({
+                items: $('student-list li').length,
                 itemsOnPage: 10,
                 cssStyle: 'light-theme'
+              });
             });
-          });
+        */
     </script>
   </body>
 </html>
