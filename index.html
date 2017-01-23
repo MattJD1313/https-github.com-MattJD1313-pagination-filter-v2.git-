@@ -6,6 +6,7 @@
     <title>Students</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/design.css">
+    <link type="text/css" rel="stylesheet" href="path_to/simplePagination.css"/>
   </head>
   <body>
     <div class="page">
@@ -559,6 +560,16 @@
       <-- dynamically add pagination links here -->
 
     </div>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
+    <script>
+        $(function() {
+            $(selector).pagination({
+                items: 100,
+                itemsOnPage: 10,
+                cssStyle: 'light-theme'
+            });
+          });
+    </script>
   </body>
 </html>
-
