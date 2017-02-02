@@ -1,9 +1,14 @@
-#page-nav {
-    margin-top: 30px;
-    margin-bottom: -20px;
+.pagination li a {
+    display: inline-block;
+    border: 1px solid black;
+    padding: 17px;
+    background-color: #eaeaea;
 }
 
-#search-nodata {
-    width: 25%;
-    float: right;
+.page {
+    margin-bottom: -30px;
+}
+
+.pagination li a {
+    background-color: #4ba6c3;
 }

@@ -13,8 +13,12 @@
       <div class="page-header cf">
         <h2>Students</h2>
         <!-- dynamically insert search form here (optional) -->
+      <div class="student-search">
+          <input id="listNames" placeholder="Search for students..." onChange="searchNames(event)" onKeyUp="searchNames(event)">
+          <button>Search</button>
       </div>
-      <ul class="student-list">
+      </div>
+      <ul id="list" class="student-list">
         <li class="student-item cf">
             <div class="student-details">
                 <img class="avatar" src="https://randomuser.me/api/portraits/thumb/women/67.jpg">
@@ -556,8 +560,11 @@
            </div>
         </li>
       </ul>
+    </div>
       <!-- dynamically add pagination links here -->
+    <div class = 'pagination'></div>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
   </body>
 </html>
