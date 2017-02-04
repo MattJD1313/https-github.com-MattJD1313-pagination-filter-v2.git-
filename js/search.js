@@ -13,7 +13,6 @@ function searchNames(enteredSearch) {
                 $(studentNames[i].parentNode.parentNode).addClass('selected');
                 displayPages('.selected');
                 thisSearch += 1;
-                return thisSearch;
             }
         }
         if(thisSearch === 0) {
