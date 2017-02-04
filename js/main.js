@@ -43,14 +43,20 @@ for(let i = 1 ; i <= pages.length + 1  ; i++) {
     createButtonList('.pagination ul', i);
 }
 
-//When the document loads it will set the opening page to page one by executing the displayPages function just once.
+/*When the document loads it will set the opening page to page one by executing the displayPages function and
+assigning the 'active' class to the page 1 button just once.
+ */
 
-$(document).one(displayPages('.page1'));
+$(document).one(pageClass = '.page1',displayPages(pageClass),$('#1').addClass('active'));
+
 
 //When an 'a' element is clicked the displayPages function is called to display the page that correlates to the element clicked.
 
 $("a").click(function(){
+    $('a').removeClass('active');
+    $(this).addClass('active');
     let buttonId = this.id;
-    let pageClass = '.page'+ buttonId;
+    $(buttonId).focus();
+    pageClass = '.page'+ buttonId;
     displayPages(pageClass);
 });

@@ -1,14 +1,11 @@
 .pagination li a {
     display: inline-block;
     border: 1px solid black;
-    padding: 17px;
+    padding: 12px;
     background-color: #eaeaea;
 }
 
 .page {
-    margin-bottom: -30px;
-}
-
-.pagination li a {
-    background-color: #4ba6c3;
+    padding-bottom: 70px;
+    margin-bottom: -95px;
 }
