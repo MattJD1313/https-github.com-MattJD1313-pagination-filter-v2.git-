@@ -1,5 +1,6 @@
 const listElements = document.getElementsByTagName('li');
 const listLength = listElements.length;
+let pageClass;
 const pages = [];
 
 //Adds a class that delineates pages and saves the number of pages to the array 'pages'.
@@ -30,14 +31,19 @@ function displayPages(page) {
 }
 
 //Dynamically creates buttons that correlate to specific page classes.
+function createNavButton() {
+    let list = document.createElement('Div');
+    let ulList = document.createElement('Ul');
+    list.appendChild(ulList);
+    $(list).addClass('pagination');
+    document.body.appendChild(list);
+}
+createNavButton();
 
 function createButtonList(element,page){
     let $listElement = $('<li><a id="' + page + '">'+ page +'</a>'+'</li>');
     $listElement.appendTo($(element));
 }
-
-let $list = $('<ul></ul>');
-$list.appendTo($('.pagination'));
 
 for(let i = 1 ; i <= pages.length + 1  ; i++) {
     createButtonList('.pagination ul', i);
@@ -47,7 +53,13 @@ for(let i = 1 ; i <= pages.length + 1  ; i++) {
 assigning the 'active' class to the page 1 button just once.
  */
 
-$(document).one(pageClass = '.page1',displayPages(pageClass),$('#1').addClass('active'));
+function pageInitialize(){
+    pageInitialize = function(){}; // kill it as soon as it was called
+    pageClass = '.page1';
+    displayPages(pageClass);
+    document.getElementById('1').className = 'active';
+}
+pageInitialize();
 
 
 //When an 'a' element is clicked the displayPages function is called to display the page that correlates to the element clicked.
@@ -56,7 +68,6 @@ $("a").click(function(){
     $('a').removeClass('active');
     $(this).addClass('active');
     let buttonId = this.id;
-    $(buttonId).focus();
     pageClass = '.page'+ buttonId;
     displayPages(pageClass);
 });
